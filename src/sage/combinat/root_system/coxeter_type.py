@@ -1,6 +1,5 @@
 """
 Coxeter types
-Coxeter types
 """
 # ****************************************************************************
 #       Copyright (C) 2015 Travis Scrimshaw <tscrim at ucdavis.edu>,
@@ -26,12 +25,11 @@ from sage.misc.cachefunc import cached_method
 from sage.misc.classcall_metaclass import ClasscallMetaclass
 from sage.matrix.args import SparseEntry
 from sage.matrix.constructor import Matrix
+from sage.misc.lazy_import import lazy_import
 from sage.structure.unique_representation import UniqueRepresentation
 from sage.structure.sage_object import SageObject
-from sage.misc.lazy_import import lazy_import
 
 lazy_import('sage.rings.universal_cyclotomic_field', 'UniversalCyclotomicField')
-
 
 
 class CoxeterType(SageObject, metaclass=ClasscallMetaclass):

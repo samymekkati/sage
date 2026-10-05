@@ -16,11 +16,12 @@ Hyperbolic Coxeter types.
 #                  https://www.gnu.org/licenses/
 # ****************************************************************************
 
-from sage.combinat.root_system.coxeter_type import CoxeterType
 from sage.combinat.root_system.coxeter_matrix import CoxeterMatrix
+from sage.combinat.root_system.coxeter_type import CoxeterType
 from sage.combinat.root_system.hyperbolic_coxeter_matrices import (
     hyperbolic_coxeter_matrices,
-    mcmullen_notation)
+    mcmullen_notation,
+)
 
 
 class CoxeterType_Hyperbolic(CoxeterType):
@@ -84,11 +85,10 @@ class CoxeterType_Hyperbolic(CoxeterType):
                 f"Coxeter type of ['{self._prefix}', {self._index}] "
                 f"with Humphrey's datum (Page : {a}, Column : {b}, Row : {c})"
             )
-        else:
-            return (
-                f"Coxeter type with Humphrey's datum "
-                f"(Page : {a}, Column : {b}, Row : {c})"
-            )
+        return (
+            f"Coxeter type with Humphrey's datum "
+            f"(Page : {a}, Column : {b}, Row : {c})"
+        )
 
     def rank(self):
         """
